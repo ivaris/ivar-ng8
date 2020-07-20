@@ -14,12 +14,18 @@ import { MatIconModule} from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {AddProductComponent} from './product/addproduct.component';
+import {NgImageSliderModule} from 'ng-image-slider';
+import { PreviewComponent } from './product/preview.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    AddProductComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    NgImageSliderModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

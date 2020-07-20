@@ -1,0 +1,10 @@
+<ngb-carousel *ngIf="productImages">
+  <ng-template ngbSlide *ngFor="let productImage of productImages">
+    <div class="picsum-img-wrapper">
+      <center><img [src]="productImage.image" alt="{{productImage.colorDescription}}"></center>
+    </div>
+    <div class="carousel-caption" >
+      <p>{{productImage.colorDescription}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

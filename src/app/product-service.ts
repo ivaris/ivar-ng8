@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-
-import {  throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators'
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {throwError} from 'rxjs';
+import {catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ProductService {
 
-  private SERVER_URL = "http://localhost:3000/products";
+  private SERVER_URL = 'http://localhost:8010/search-api/rest/search.xml?Ntt=&N=uniformProgram_Stock+uniformProgram_Custom_Stock&pageNum=1&pageMode=1000&sortString=rowNumber%7Cdesc&lang_locale=en_US';
 
   constructor(private httpClient: HttpClient) { }
 

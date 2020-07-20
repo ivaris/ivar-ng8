@@ -1,20 +1,16 @@
-<div style="padding: 13px;">
-    <mat-spinner *ngIf="products.length === 0"></mat-spinner>
+<mat-spinner *ngIf="data.template.products.productGroups.length === 0"></mat-spinner>
+<div class="card-columns" *ngIf="data.template.products.productGroups.length != 0">
+  <div class="card" *ngFor="let productGroup of data.template.products.productGroups">
+    <div class="card-header">
+      <h7 class="card-title">{{productGroup.products[0].displayName}}</h7>
+    </div>
 
-    <mat-card *ngFor="let product of products" style="margin-top:10px;">
-        <mat-card-header>
-            <mat-card-title>{{product.name}}</mat-card-title>
-            <mat-card-subtitle>{{product.price}} $/ {{product.quantity}}
-            </mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-                {{product.description}}
-            </p>
-            <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
-        </mat-card-content>
-        <mat-card-actions>
-      <button mat-button> Buy product</button>
-    </mat-card-actions>
-    </mat-card>
+    <div class="card-body">
+      <app-product-preview [product]= "productGroup.products"></app-product-preview>
+    </div>
+    <div class="card-footer">
+      <p class="card-text">{{productGroup.products[0].groupId}}</p>
+      <small class="text-muted">{{productGroup.products[0].formattedListPrice}}</small>
+    </div>
+  </div>
 </div>
