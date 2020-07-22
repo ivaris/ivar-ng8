@@ -8,7 +8,7 @@ import {catchError} from 'rxjs/operators';
 })
 export class ProductService {
 
-  private SERVER_URL = 'http://localhost:8010/search-api/rest/search.xml?Ntt=&N=uniformProgram_Stock+uniformProgram_Custom_Stock&pageNum=1&pageMode=1000&sortString=rowNumber%7Cdesc&lang_locale=en_US';
+  private SERVER_URL = 'http://localhost:8010/search-api/rest/search.xml?Ntt=&N=gender_Men+sport_Basketball+uniformProgram_Stock&pageNum=1&pageMode=1000&sortString=rowNumber%7Cdesc&lang_locale=en_US';
 
   constructor(private httpClient: HttpClient) { }
 

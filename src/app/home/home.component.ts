@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
       console.log(data);
       this.data = data;
       console.log("products loaded");
-      console.log(this.data);
+      //console.log(this.data);
     })
   }
 
