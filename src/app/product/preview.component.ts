@@ -27,7 +27,7 @@ export class PreviewComponent implements OnInit {
       };
       //console.log(productVariant.colorDescription);
       productImage.colorDescription = productVariant.colorDescription;
-      productImage.image = "https://images2.nike.net/is/image/DPILS/" + productVariant.id + "-PV?fmt=jpeg&resMode=sharp2&wid=160&hei=400&cb=123";
+      productImage.image = "https://adobe.scene7.com/is/image/DPILS/" + productVariant.id + "-PV?fmt=jpeg&resMode=sharp2&wid=160&hei=400&cb=123";
       return productImage;
     });
   }
